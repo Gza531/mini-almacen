@@ -1,9 +1,7 @@
 from django.db import models
 
-# Create your models here.
-
 class Categoria (models.Model): 
-    nombre = models.CharField (
+    nombre = models.CharField(
         max_length = 50, 
         unique = True,
     )
@@ -14,11 +12,11 @@ class Categoria (models.Model):
 
 
     class Meta: 
-        db_table = "Categorias"
+        db_table = "categorias"
         ordering = ["nombre"]
 
-    def __str__ (self): 
-        return f"{self.nombre} - {self.estado}" 
+    def __str__(self): 
+        return f"{self.nombre}" 
     
     
 class Producto (models.Model): 
@@ -42,8 +40,8 @@ class Producto (models.Model):
     )
 
     class Meta:
-        db_table = "Productos"
+        db_table = "productos"
         ordering = ["nombre"]
 
-    def __str__ (self): 
-        return f"{self.nombre} - {self.precio} - {self.categoria}"
+    def __str__(self): 
+        return f"{self.nombre} - {self.precio} "

@@ -7,6 +7,6 @@ admin.site.register (Categoria)
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "categoria", "estado")
+    list_display = ("nombre", "categoria", "estado", "precio")
     search_fields = ("nombre",)
     list_filter = ("categoria", "estado")
